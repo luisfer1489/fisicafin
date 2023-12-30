@@ -1,0 +1,66 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="pestaña.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Videos</title>
+        <link rel="stylesheet" href="estilos2.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    </head>
+   <header>
+    <p>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="presentacion.html">Videos</a>
+             <a href="medidas.html">Repositorio</a>
+             <a href="Blibliografía.html">Libros</a>
+             <a href="QR.html">About us</a>   
+            
+        </nav>
+    </p>
+   </header>
+    <body class="bodypren">
+        <br> <br><br><br>
+        
+            <div class="video-container">
+                <button class="scroll-button left" onclick="scrollVideos(-1)">‹</button>
+                <div class="video-row" id="videoRow">
+                    <div class="video-box">
+                        
+                        <iframe width="560" height="1080" src="https://www.youtube.com/embed/l-n0LFTWIJY" title="2da Ley de Newton" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-box">
+                        
+                        <iframe width="1198" height="674" src="https://www.youtube.com/embed/wDY6oekKEAM" title="COMO LEER EL VERNIER EN PULGADAS CON NONIO DE 1/128 PULGADAS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-box">
+                        
+                        <iframe width="1198" height="674" src="https://www.youtube.com/embed/WCpLI8-hAeQ" title="COMO GRAFICAR LA DESVIACIÓN ESTANDAR APLICANDO BARRAS DE ERROR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <!-- Agrega más videos según sea necesario -->
+                </div>
+                <button class="scroll-button right" onclick="scrollVideos(1)">›</button>
+            </div>
+        
+            <script>
+                function scrollVideos(direction) {
+                    const videoRow = document.getElementById('videoRow');
+                    const scrollAmount = 1050; // Ajusta la cantidad de desplazamiento
+        
+                    videoRow.scrollLeft += scrollAmount * direction;
+                }
+            </script>
+        
+           
+        </div>
+            <p id="Presentacion"></p>  
+            
+            <p>
+                <nav class="navp">
+                    <a href="index.html">inicio</a>
+                </nav>
+            </p>
+    </body>
+    
+</html>

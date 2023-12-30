@@ -1,0 +1,98 @@
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="pestaña.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simulador de Estructuras Cristalinas</title>
+        <script src="https://threejs.org/build/three.js"></script>
+        <link rel="stylesheet" href="estilos2.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+        <style>
+            .texto1{
+                text-align: center;
+            }
+            #crystal {
+              position: relative;
+              width: 80%;
+              height: 80%;
+              border: 1px solid #ccc;
+            }
+        
+            .atom {
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              background-color: #3498db;
+              border-radius: 50%;
+            }
+          </style>
+    </head>
+   <header>
+    <p>
+        <nav>
+            <a href="index.html">Inicio</a>
+        <a href="presentacion.html">Videos</a>
+        <a href="medidas.html">Repositorio</a>
+        <a href="Blibliografía.html">Libros</a>
+        <a href="QR.html">About us</a>   
+            
+        </nav>
+    </p>
+    </header>
+    <body>
+        
+            <h1 class="texto1">
+                Estructura SC
+            </h1>
+      
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Configuración básica de Three.js
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      // Crear estructuras cristalinas
+     
+      var scGeometry = new THREE.BoxGeometry();
+
+      // Posiciones de los cubos para cada estructura
+    
+      scGeometry.translate(0, 0, 0);
+
+      // Crear materiales
+      var material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
+
+      // Crear mallas
+     
+      var scMesh = new THREE.Mesh(scGeometry, material);
+
+      // Agregar mallas a la escena
+     
+      scene.add(scMesh);
+
+      // Posicionar la cámara
+      camera.position.z = 5;
+
+      // Animación
+      var animate = function () {
+        requestAnimationFrame(animate);
+
+        // Rotar las estructuras
+     
+        scMesh.rotation.x += 0.01;
+        scMesh.rotation.y += 0.01;
+
+        renderer.render(scene, camera);
+      };
+
+      animate();
+    });
+  </script>
+</body>
+</html>

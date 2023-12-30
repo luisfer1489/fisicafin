@@ -1,0 +1,79 @@
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="pestaña.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Libros</title>
+        <link rel="stylesheet" href="estilos2.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+        <style>
+            body {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+             
+            }
+        
+            .box {
+              width: 30%;
+              padding: 35px;
+              height: 80%;
+              box-sizing: border-box;
+              text-align: center;
+              transition: transform 0.2s;
+            }
+        
+            .box:hover {
+              transform: scale(1.1);
+            }
+        
+            .box img {
+              width: 100%;
+              height: auto;
+              border-radius: 8px;
+            }
+          </style>
+        
+    </head>
+   <header>
+    <p>
+        <nav>
+        <a href="index.html">Inicio</a>
+        <a href="presentacion.html">Videos</a>
+        <a href="medidas.html">Repositorio</a>
+        <a href="Blibliografía.html">Libros</a>
+        <a href="QR.html">About us</a>   
+            
+        </nav>
+    </p>
+    </header>
+    
+    <body>
+        <!-- Recuadros 5x5 -->
+        <div class="box" onclick="window.location.href='https://www.altascapacidadesarca.org/wp-content/uploads/2018/12/Fisica_General_-_Fisica_Universitaria_Vol_2__ed_12Sears-Zemansky.pdf'">
+          <img src="libro1.png" alt="Imagen 1">
+        </div>
+        <div class="box" onclick="window.location.href='URL_1'">
+            <img src="libro 2.webp" alt="Imagen 1">
+        </div>
+        <div class="box" onclick="window.location.href='https://www.lehman.edu/faculty/anchordoqui/SJ1.pdf'">
+            <img src="libro 3.webp" alt="Imagen 1">
+        </div>
+
+        <div class="box" onclick="window.location.href='https://online.fliphtml5.com/nywvi/mtws/#p=1'">
+          <img src="libro4.webp" alt="Imagen 2">
+        </div>
+        <div class="box" onclick="window.location.href='URL_3'">
+          <img src="3da38de27b16b94b27318e4fd8b22e23.webp" alt="Imagen 3">
+        </div>
+        <div class="box" onclick="window.location.href='https://archive.org/embed/mosca-vol-i-fisica-tipler-5ta-edicion-vol-1'">
+          <img src="libro5.png" alt="Imagen 4">
+        </div>
+        <!-- ... Repite para las otras imágenes ... -->
+      </body>
+</html>
